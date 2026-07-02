@@ -8,8 +8,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/dokumentasi', 'dokumentasi');
-
 // API Routes
 Route::prefix('api/dashboard')->group(function () {
     Route::get('summary', [DashboardController::class, 'summary']);
