@@ -8,7 +8,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/dokumentasi', 'dokumentasi');
+// Sidebar Menus
+Route::view('/cleaning', 'pages.cleaning');
+Route::view('/eda', 'pages.eda');
+Route::view('/insight', 'pages.insight');
 
 // API Routes
 Route::prefix('api/dashboard')->group(function () {
