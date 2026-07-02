@@ -49,7 +49,6 @@
             <ul class="navbar-nav pt-lg-3">
               
               <li class="nav-item-header mt-3"><div class="text-uppercase font-weight-bold" style="font-size: 0.75rem; color: #8a98ac; padding: 0 1rem;">Analytics</div></li>
-              
               <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
                 <a class="nav-link" href="/">
                   <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -59,8 +58,15 @@
                 </a>
               </li>
 
-              <li class="nav-item-header mt-4"><div class="text-uppercase font-weight-bold" style="font-size: 0.75rem; color: #8a98ac; padding: 0 1rem;">Data Mining & ETL</div></li>
-              
+              <li class="nav-item-header mt-4"><div class="text-uppercase font-weight-bold" style="font-size: 0.75rem; color: #8a98ac; padding: 0 1rem;">Data Preparation</div></li>
+              <li class="nav-item {{ request()->is('dataset') ? 'active' : '' }}">
+                <a class="nav-link" href="/dataset">
+                  <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-16z" /><path d="M12 4v7l-2 -2l-2 2v-7" /></svg>
+                  </span>
+                  <span class="nav-link-title">Sumber Dataset</span>
+                </a>
+              </li>
               <li class="nav-item {{ request()->is('cleaning') ? 'active' : '' }}">
                 <a class="nav-link" href="/cleaning">
                   <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -69,7 +75,16 @@
                   <span class="nav-link-title">Data Cleaning (ETL)</span>
                 </a>
               </li>
-              
+              <li class="nav-item {{ request()->is('nlp') ? 'active' : '' }}">
+                <a class="nav-link" href="/nlp">
+                  <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon text-primary" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 20l1.3 -3.9a9 8 0 1 1 3.4 2.9l-4.7 1" /><path d="M8 13l4 -2l4 2" /></svg>
+                  </span>
+                  <span class="nav-link-title">NLP Preprocessing</span>
+                </a>
+              </li>
+
+              <li class="nav-item-header mt-4"><div class="text-uppercase font-weight-bold" style="font-size: 0.75rem; color: #8a98ac; padding: 0 1rem;">Analisis & Modeling</div></li>
               <li class="nav-item {{ request()->is('eda') ? 'active' : '' }}">
                 <a class="nav-link" href="/eda">
                   <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -78,9 +93,16 @@
                   <span class="nav-link-title">Exploratory Data Analysis</span>
                 </a>
               </li>
+              <li class="nav-item {{ request()->is('scoring') ? 'active' : '' }}">
+                <a class="nav-link" href="/scoring">
+                  <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon text-cyan" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M3 12h4" /><path d="M17 12h4" /><path d="M12 3v4" /><path d="M12 17v4" /></svg>
+                  </span>
+                  <span class="nav-link-title">Lexicon Sentiment Scoring</span>
+                </a>
+              </li>
 
-              <li class="nav-item-header mt-4"><div class="text-uppercase font-weight-bold" style="font-size: 0.75rem; color: #8a98ac; padding: 0 1rem;">Insights & ML Output</div></li>
-              
+              <li class="nav-item-header mt-4"><div class="text-uppercase font-weight-bold" style="font-size: 0.75rem; color: #8a98ac; padding: 0 1rem;">Knowledge Discovery</div></li>
               <li class="nav-item {{ request()->is('insight') ? 'active' : '' }}">
                 <a class="nav-link" href="/insight">
                   <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -88,6 +110,14 @@
                   </span>
                   <span class="nav-link-title">Insight Otomatis</span>
                   <span class="badge bg-indigo-lt ms-auto">ML</span>
+                </a>
+              </li>
+              <li class="nav-item {{ request()->is('recommendation') ? 'active' : '' }}">
+                <a class="nav-link" href="/recommendation">
+                  <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon text-success" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 11v11" /><path d="M8 14.5l4 -2.5l4 2.5" /><path d="M12 2l-3 5h6z" /></svg>
+                  </span>
+                  <span class="nav-link-title">Rekomendasi Bisnis</span>
                 </a>
               </li>
               
