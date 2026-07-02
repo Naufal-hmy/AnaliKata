@@ -164,9 +164,7 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-menu">
               <!-- Search bar or breadcrumb could go here -->
-              <div>
-                <span class="badge bg-green-lt"><span class="badge bg-green badge-blink me-2"></span> Live &middot; Youtube Political Dataset</span>
-              </div>
+              <!-- Empty div removed -->
             </div>
           </div>
         </header>
