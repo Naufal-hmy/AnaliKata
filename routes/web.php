@@ -9,6 +9,7 @@ Route::get('/', function () {
 });
 
 // Sidebar Menus
+Route::view('/pendahuluan', 'pages.pendahuluan');
 Route::view('/dataset', 'pages.dataset');
 Route::view('/cleaning', 'pages.cleaning');
 Route::view('/nlp', 'pages.nlp');
@@ -16,6 +17,7 @@ Route::view('/eda', 'pages.eda');
 Route::view('/scoring', 'pages.scoring');
 Route::view('/insight', 'pages.insight');
 Route::view('/recommendation', 'pages.recommendation');
+Route::view('/kesimpulan', 'pages.kesimpulan');
 
 // API Routes
 Route::prefix('api/dashboard')->group(function () {

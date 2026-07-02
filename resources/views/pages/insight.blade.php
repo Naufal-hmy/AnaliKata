@@ -44,12 +44,12 @@ $lexicons = Lexicon::whereIn('word', $topPhrases->pluck('phrase'))->get()->keyBy
 
 // 3. Machine Learning (Rules-Based Classification)
 $visualData = $topPhrases->map(function ($item) use ($lexicons) {
-    $color = '#6c7a91'; // Default: Netral (Abu-abu)
+    $color = '#f59f00'; // Default: Netral (Oren Tua)
     
     if (isset($lexicons[$item->phrase])) {
         $weight = $lexicons[$item->phrase]->weight;
         
-        // Klasifikasi Semantik berdasar batas threshold (0.0)
+        // Klasifikasi Semantik
         if ($weight > 0.0) $color = '#2fb344'; // Positif -> Hijau
         if ($weight < 0.0) $color = '#d63939'; // Negatif -> Merah
     }

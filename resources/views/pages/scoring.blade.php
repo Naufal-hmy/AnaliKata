@@ -44,7 +44,7 @@
                         <td><span class="badge bg-secondary">Before</span></td>
                         <td><strong>"asing"</strong></td>
                         <td><i>(Belum dinilai)</i></td>
-                        <td>Abu-abu (Netral)</td>
+                        <td>Oren Tua (Netral)</td>
                     </tr>
                     <tr class="bg-red-lt">
                         <td><span class="badge bg-danger">After Algoritma</span></td>
@@ -57,7 +57,7 @@
                         <td><span class="badge bg-secondary">Before</span></td>
                         <td><strong>"dukung"</strong></td>
                         <td><i>(Belum dinilai)</i></td>
-                        <td>Abu-abu (Netral)</td>
+                        <td>Oren Tua (Netral)</td>
                     </tr>
                     <tr class="bg-green-lt">
                         <td><span class="badge bg-success">After Algoritma</span></td>

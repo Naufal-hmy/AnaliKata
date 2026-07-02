@@ -58,6 +58,16 @@
                 </a>
               </li>
 
+              <li class="nav-item-header mt-4"><div class="text-uppercase font-weight-bold" style="font-size: 0.75rem; color: #8a98ac; padding: 0 1rem;">Project Initiation</div></li>
+              <li class="nav-item {{ request()->is('pendahuluan') ? 'active' : '' }}">
+                <a class="nav-link" href="/pendahuluan">
+                  <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" /><path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" /></svg>
+                  </span>
+                  <span class="nav-link-title">Latar Belakang</span>
+                </a>
+              </li>
+
               <li class="nav-item-header mt-4"><div class="text-uppercase font-weight-bold" style="font-size: 0.75rem; color: #8a98ac; padding: 0 1rem;">Data Preparation</div></li>
               <li class="nav-item {{ request()->is('dataset') ? 'active' : '' }}">
                 <a class="nav-link" href="/dataset">
@@ -118,6 +128,16 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon text-success" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 11v11" /><path d="M8 14.5l4 -2.5l4 2.5" /><path d="M12 2l-3 5h6z" /></svg>
                   </span>
                   <span class="nav-link-title">Rekomendasi Bisnis</span>
+                </a>
+              </li>
+              
+              <li class="nav-item-header mt-4"><div class="text-uppercase font-weight-bold" style="font-size: 0.75rem; color: #8a98ac; padding: 0 1rem;">Finalisasi</div></li>
+              <li class="nav-item {{ request()->is('kesimpulan') ? 'active' : '' }}">
+                <a class="nav-link" href="/kesimpulan">
+                  <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon text-primary" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11l3 3l8 -8" /><path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
+                  </span>
+                  <span class="nav-link-title">Kesimpulan Akhir</span>
                 </a>
               </li>
               
