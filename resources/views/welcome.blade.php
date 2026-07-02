@@ -70,11 +70,11 @@
                     <div class="row g-3">
                       <div class="col-md-5">
                         <label class="form-label">Tanggal Mulai</label>
-                        <input type="date" id="start_date" class="form-control" value="2026-01-01">
+                        <input type="date" id="start_date" class="form-control" value="2026-01-25" min="2026-01-25" max="2026-02-01">
                       </div>
                       <div class="col-md-5">
                         <label class="form-label">Tanggal Akhir</label>
-                        <input type="date" id="end_date" class="form-control" value="2026-12-31">
+                        <input type="date" id="end_date" class="form-control" value="2026-02-01" min="2026-01-25" max="2026-02-01">
                       </div>
                       <div class="col-md-2 d-flex align-items-end">
                         <button type="submit" class="btn btn-primary w-100">
