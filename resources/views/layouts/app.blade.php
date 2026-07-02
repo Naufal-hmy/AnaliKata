@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-    <title>@yield('title', 'AnaliKata PRO - Analytics & Machine Learning')</title>
+    <title>@yield('title', 'AnaliKata - Analytics & Machine Learning')</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta20/dist/css/tabler.min.css">
     
     <!-- PrismJS for Code Snippets -->
@@ -35,7 +35,7 @@
           <h1 class="navbar-brand navbar-brand-autodark">
             <a href="/" class="d-flex align-items-center gap-2" style="text-decoration: none;">
               <span class="bg-primary text-white avatar avatar-sm rounded">AK</span>
-              <span>AnaliKata <span class="badge bg-primary text-white badge-sm ms-1">PRO</span></span>
+              <span>AnaliKata</span>
             </a>
           </h1>
           <div class="navbar-nav flex-row d-lg-none">
