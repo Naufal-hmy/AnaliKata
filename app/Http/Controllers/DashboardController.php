@@ -99,10 +99,25 @@ class DashboardController extends Controller
                             ->limit(40)
                             ->get();
                             
-        $formatted = $topPhrases->map(function ($item) {
+        $phrasesArray = $topPhrases->pluck('phrase')->toArray();
+        $lexicons = \App\Models\Lexicon::whereIn('word', $phrasesArray)->get()->keyBy('word');
+                            
+        $formatted = $topPhrases->map(function ($item) use ($lexicons) {
+            $color = '#6c7a91'; // default grey
+            if (isset($lexicons[$item->phrase])) {
+                $weight = $lexicons[$item->phrase]->weight;
+                if ($weight > 0) {
+                    $color = '#2fb344'; // Green (Positif)
+                } elseif ($weight < 0) {
+                    $color = '#d63939'; // Red (Negatif)
+                } else {
+                    $color = '#f59f00'; // Orange (Netral)
+                }
+            }
             return [
                 'x' => $item->phrase,
-                'value' => $item->total_freq
+                'value' => $item->total_freq,
+                'normal' => ['fill' => $color]
             ];
         });
         

@@ -292,7 +292,6 @@
                 wordcloudChartObj = anychart.tagCloud(words);
                 wordcloudChartObj.angles([0, -45, 90]);
                 wordcloudChartObj.colorRange(false);
-                wordcloudChartObj.colorScale(anychart.scales.ordinalColor().colors(["#206bc4", "#4299e1", "#f59f00", "#d63939", "#2fb344", "#6f42c1"]));
                 wordcloudChartObj.container("wordcloud");
                 wordcloudChartObj.draw();
             }
