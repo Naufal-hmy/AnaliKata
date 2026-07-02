@@ -20,7 +20,7 @@ class ImportDataCommand extends Command
     {
         $this->info('Starting Data Pipeline...');
         
-        $basePath = base_path('../archive (3)');
+        $basePath = base_path('dataset');
         
         // Log Before
         $this->info("Counting raw rows before cleaning...");
